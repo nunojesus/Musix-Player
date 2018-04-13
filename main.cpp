@@ -2,7 +2,7 @@
 #include <QApplication>
 #include <QtMultimedia>
 #include <QtMultimediaWidgets>
-
+#include <QAction>
 
 int main(int argc, char *argv[])
 {

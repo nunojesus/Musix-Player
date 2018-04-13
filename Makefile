@@ -526,7 +526,11 @@ compiler_rcc_make_all: qrc_resources.cpp
 compiler_rcc_clean:
 	-$(DEL_FILE) qrc_resources.cpp
 qrc_resources.cpp: resources.qrc \
-		/usr/bin/rcc
+		/usr/bin/rcc \
+		white-rewind-16.png \
+		white-play-16.png \
+		Open_file_document_paper_folder.png \
+		white-fast-forward-16.png
 	/usr/bin/rcc -name resources resources.qrc -o qrc_resources.cpp
 
 compiler_moc_predefs_make_all: moc_predefs.h

@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>300</height>
+    <width>1005</width>
+    <height>461</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -18,118 +18,130 @@
     <normaloff>../Pictures/959798516.jpg</normaloff>../Pictures/959798516.jpg</iconset>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <widget class="QPushButton" name="pushButton">
-    <property name="geometry">
-     <rect>
-      <x>170</x>
-      <y>190</y>
-      <width>41</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="cursor">
-     <cursorShape>PointingHandCursor</cursorShape>
-    </property>
-    <property name="toolTip">
-     <string>Play</string>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="icon">
-     <iconset resource="resources.qrc">
-      <normaloff>:/Images/white-play-16.png</normaloff>:/Images/white-play-16.png</iconset>
-    </property>
-    <property name="checkable">
-     <bool>false</bool>
-    </property>
-    <property name="autoDefault">
-     <bool>false</bool>
-    </property>
-    <property name="default">
-     <bool>false</bool>
-    </property>
-    <property name="flat">
-     <bool>false</bool>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButton_2">
-    <property name="geometry">
-     <rect>
-      <x>130</x>
-      <y>200</y>
-      <width>41</width>
-      <height>24</height>
-     </rect>
-    </property>
-    <property name="cursor">
-     <cursorShape>PointingHandCursor</cursorShape>
-    </property>
-    <property name="toolTip">
-     <string>rewind</string>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="icon">
-     <iconset resource="resources.qrc">
-      <normaloff>:/Images/white-rewind-16.png</normaloff>:/Images/white-rewind-16.png</iconset>
-    </property>
-   </widget>
-   <widget class="QScrollArea" name="scrollArea">
-    <property name="geometry">
-     <rect>
-      <x>389</x>
-      <y>-1</y>
-      <width>111</width>
-      <height>241</height>
-     </rect>
-    </property>
-    <property name="widgetResizable">
-     <bool>true</bool>
-    </property>
-    <widget class="QWidget" name="scrollAreaWidgetContents">
-     <property name="geometry">
-      <rect>
-       <x>0</x>
-       <y>0</y>
-       <width>109</width>
-       <height>239</height>
-      </rect>
-     </property>
-    </widget>
-   </widget>
-   <widget class="QPushButton" name="pushButton_3">
-    <property name="geometry">
-     <rect>
-      <x>210</x>
-      <y>200</y>
-      <width>41</width>
-      <height>24</height>
-     </rect>
-    </property>
-    <property name="cursor">
-     <cursorShape>PointingHandCursor</cursorShape>
-    </property>
-    <property name="toolTip">
-     <string>forward</string>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="icon">
-     <iconset resource="resources.qrc">
-      <normaloff>:/Images/white-fast-forward-16.png</normaloff>:/Images/white-fast-forward-16.png</iconset>
-    </property>
-   </widget>
-  </widget>
-  <widget class="QToolBar" name="mainToolBar">
-   <attribute name="toolBarArea">
-    <enum>TopToolBarArea</enum>
-   </attribute>
-   <attribute name="toolBarBreak">
-    <bool>true</bool>
-   </attribute>
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item alignment="Qt::AlignLeft">
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="tabShape">
+       <enum>QTabWidget::Rounded</enum>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <property name="tabBarAutoHide">
+       <bool>false</bool>
+      </property>
+      <widget class="QWidget" name="tab_3">
+       <attribute name="title">
+        <string>Library</string>
+       </attribute>
+       <attribute name="toolTip">
+        <string>Music Library</string>
+       </attribute>
+       <widget class="QWidget" name="verticalLayoutWidget">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>261</y>
+          <width>911</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_2">
+         <item>
+          <widget class="QScrollBar" name="horizontalScrollBar">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="tab_4">
+       <attribute name="title">
+        <string>Recently Played....</string>
+       </attribute>
+      </widget>
+     </widget>
+    </item>
+    <item>
+     <widget class="QSlider" name="horizontalSlider">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="invertedControls">
+       <bool>false</bool>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_3">
+      <item>
+       <widget class="QPushButton" name="pushButton_2">
+        <property name="cursor">
+         <cursorShape>ArrowCursor</cursorShape>
+        </property>
+        <property name="toolTip">
+         <string>rewind</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="resources.qrc">
+          <normaloff>:/Images/white-rewind-16.png</normaloff>:/Images/white-rewind-16.png</iconset>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton">
+        <property name="cursor">
+         <cursorShape>ArrowCursor</cursorShape>
+        </property>
+        <property name="toolTip">
+         <string>Play</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="resources.qrc">
+          <normaloff>:/Images/white-play-16.png</normaloff>:/Images/white-play-16.png</iconset>
+        </property>
+        <property name="checkable">
+         <bool>false</bool>
+        </property>
+        <property name="autoDefault">
+         <bool>false</bool>
+        </property>
+        <property name="default">
+         <bool>false</bool>
+        </property>
+        <property name="flat">
+         <bool>false</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_3">
+        <property name="cursor">
+         <cursorShape>ArrowCursor</cursorShape>
+        </property>
+        <property name="toolTip">
+         <string>forward</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="resources.qrc">
+          <normaloff>:/Images/white-fast-forward-16.png</normaloff>:/Images/white-fast-forward-16.png</iconset>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
   <widget class="QMenuBar" name="menuBar">
@@ -137,7 +149,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>400</width>
+     <width>1005</width>
      <height>21</height>
     </rect>
    </property>
@@ -159,6 +171,17 @@
     <property name="title">
      <string>Edit</string>
     </property>
+    <widget class="QMenu" name="menuPreferences">
+     <property name="title">
+      <string>Preferences</string>
+     </property>
+     <addaction name="actionAppearance"/>
+     <addaction name="actionAudio_Settings"/>
+    </widget>
+    <addaction name="actionUndo_Action"/>
+    <addaction name="actionRedo_Action"/>
+    <addaction name="separator"/>
+    <addaction name="menuPreferences"/>
    </widget>
    <widget class="QMenu" name="menuAbout">
     <property name="title">
@@ -171,6 +194,29 @@
    <addaction name="menuFile"/>
    <addaction name="menuEdit"/>
    <addaction name="menuAbout"/>
+  </widget>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionOpen"/>
+  </widget>
+  <widget class="QToolBar" name="toolBar_2">
+   <property name="windowTitle">
+    <string>toolBar_2</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
   </widget>
   <action name="actionAbout">
    <property name="text">
@@ -198,6 +244,41 @@
   <action name="actionNothing_To_Show_Here">
    <property name="text">
     <string>Nothing To Show Here</string>
+   </property>
+  </action>
+  <action name="actionOpen">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/Images/Open_file_document_paper_folder.png</normaloff>:/Images/Open_file_document_paper_folder.png</iconset>
+   </property>
+   <property name="text">
+    <string>Open</string>
+   </property>
+   <property name="toolTip">
+    <string>Open...</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="actionUndo_Action">
+   <property name="text">
+    <string>Undo 'Action'</string>
+   </property>
+  </action>
+  <action name="actionRedo_Action">
+   <property name="text">
+    <string>Redo 'Action'</string>
+   </property>
+  </action>
+  <action name="actionAppearance">
+   <property name="text">
+    <string>Appearance</string>
+   </property>
+  </action>
+  <action name="actionAudio_Settings">
+   <property name="text">
+    <string>Audio Settings</string>
    </property>
   </action>
  </widget>
