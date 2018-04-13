@@ -12,3 +12,8 @@ MainWindow::~MainWindow()
 {
     delete ui;
 }
+
+void MainWindow::on_actionAbout_Musix_Player_triggered()
+{
+    QTextEdit
+}
