@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QTextEdit>
 
 namespace Ui {
 class MainWindow;
@@ -15,8 +16,14 @@ public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
 
-private slots:
+public slots:
+
     void on_actionAbout_Musix_Player_triggered();
+
+private slots:
+    void on_actionOpen_triggered();
+
+    void on_actionOpen_2_triggered();
 
 private:
     Ui::MainWindow *ui;

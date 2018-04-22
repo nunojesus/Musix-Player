@@ -14,18 +14,30 @@
    <string>Musix Player</string>
   </property>
   <property name="windowIcon">
-   <iconset>
-    <normaloff>../Pictures/959798516.jpg</normaloff>../Pictures/959798516.jpg</iconset>
+   <iconset resource="resources.qrc">
+    <normaloff>:/Images/icon.jpg</normaloff>:/Images/icon.jpg</iconset>
   </property>
   <widget class="QWidget" name="centralWidget">
    <layout class="QVBoxLayout" name="verticalLayout">
-    <item alignment="Qt::AlignLeft">
+    <item>
      <widget class="QTabWidget" name="tabWidget">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>300</width>
+        <height>16777215</height>
+       </size>
+      </property>
       <property name="tabShape">
        <enum>QTabWidget::Rounded</enum>
       </property>
       <property name="currentIndex">
-       <number>0</number>
+       <number>1</number>
       </property>
       <property name="tabBarAutoHide">
        <bool>false</bool>
@@ -163,7 +175,7 @@
      </property>
      <addaction name="actionNothing_To_Show_Here"/>
     </widget>
-    <addaction name="actionOpen_File"/>
+    <addaction name="actionOpen_2"/>
     <addaction name="actionOpen_Directory"/>
     <addaction name="menuRecent"/>
    </widget>
@@ -218,22 +230,12 @@
     <bool>false</bool>
    </attribute>
   </widget>
-  <action name="actionAbout">
-   <property name="text">
-    <string>About</string>
-   </property>
-  </action>
   <action name="actionAbout_Musix_Player">
    <property name="text">
     <string>About Musix Player</string>
    </property>
    <property name="menuRole">
     <enum>QAction::AboutQtRole</enum>
-   </property>
-  </action>
-  <action name="actionOpen_File">
-   <property name="text">
-    <string>Open File </string>
    </property>
   </action>
   <action name="actionOpen_Directory">
@@ -279,6 +281,14 @@
   <action name="actionAudio_Settings">
    <property name="text">
     <string>Audio Settings</string>
+   </property>
+  </action>
+  <action name="actionOpen_2">
+   <property name="text">
+    <string>Open</string>
+   </property>
+   <property name="toolTip">
+    <string>Open...</string>
    </property>
   </action>
  </widget>
