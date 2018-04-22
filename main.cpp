@@ -1,8 +1,7 @@
 #include "mainwindow.h"
 #include <QApplication>
-#include <QtMultimedia>
-#include <QtMultimediaWidgets>
 #include <QAction>
+#include <QLabel>
 
 int main(int argc, char *argv[])
 {

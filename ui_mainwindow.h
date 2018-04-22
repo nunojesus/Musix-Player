@@ -32,9 +32,7 @@ QT_BEGIN_NAMESPACE
 class Ui_MainWindow
 {
 public:
-    QAction *actionAbout;
     QAction *actionAbout_Musix_Player;
-    QAction *actionOpen_File;
     QAction *actionOpen_Directory;
     QAction *actionNothing_To_Show_Here;
     QAction *actionOpen;
@@ -42,6 +40,7 @@ public:
     QAction *actionRedo_Action;
     QAction *actionAppearance;
     QAction *actionAudio_Settings;
+    QAction *actionOpen_2;
     QWidget *centralWidget;
     QVBoxLayout *verticalLayout;
     QTabWidget *tabWidget;
@@ -71,15 +70,11 @@ public:
             MainWindow->setObjectName(QStringLiteral("MainWindow"));
         MainWindow->resize(1005, 461);
         QIcon icon;
-        icon.addFile(QStringLiteral("../Pictures/959798516.jpg"), QSize(), QIcon::Normal, QIcon::Off);
+        icon.addFile(QStringLiteral(":/Images/icon.jpg"), QSize(), QIcon::Normal, QIcon::Off);
         MainWindow->setWindowIcon(icon);
-        actionAbout = new QAction(MainWindow);
-        actionAbout->setObjectName(QStringLiteral("actionAbout"));
         actionAbout_Musix_Player = new QAction(MainWindow);
         actionAbout_Musix_Player->setObjectName(QStringLiteral("actionAbout_Musix_Player"));
         actionAbout_Musix_Player->setMenuRole(QAction::AboutQtRole);
-        actionOpen_File = new QAction(MainWindow);
-        actionOpen_File->setObjectName(QStringLiteral("actionOpen_File"));
         actionOpen_Directory = new QAction(MainWindow);
         actionOpen_Directory->setObjectName(QStringLiteral("actionOpen_Directory"));
         actionNothing_To_Show_Here = new QAction(MainWindow);
@@ -97,6 +92,8 @@ public:
         actionAppearance->setObjectName(QStringLiteral("actionAppearance"));
         actionAudio_Settings = new QAction(MainWindow);
         actionAudio_Settings->setObjectName(QStringLiteral("actionAudio_Settings"));
+        actionOpen_2 = new QAction(MainWindow);
+        actionOpen_2->setObjectName(QStringLiteral("actionOpen_2"));
         centralWidget = new QWidget(MainWindow);
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
         verticalLayout = new QVBoxLayout(centralWidget);
@@ -105,6 +102,12 @@ public:
         verticalLayout->setObjectName(QStringLiteral("verticalLayout"));
         tabWidget = new QTabWidget(centralWidget);
         tabWidget->setObjectName(QStringLiteral("tabWidget"));
+        QSizePolicy sizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
+        sizePolicy.setHorizontalStretch(0);
+        sizePolicy.setVerticalStretch(0);
+        sizePolicy.setHeightForWidth(tabWidget->sizePolicy().hasHeightForWidth());
+        tabWidget->setSizePolicy(sizePolicy);
+        tabWidget->setMaximumSize(QSize(300, 16777215));
         tabWidget->setTabShape(QTabWidget::Rounded);
         tabWidget->setTabBarAutoHide(false);
         tab_3 = new QWidget();
@@ -128,7 +131,7 @@ public:
         tab_4->setObjectName(QStringLiteral("tab_4"));
         tabWidget->addTab(tab_4, QString());
 
-        verticalLayout->addWidget(tabWidget, 0, Qt::AlignLeft);
+        verticalLayout->addWidget(tabWidget);
 
         horizontalSlider = new QSlider(centralWidget);
         horizontalSlider->setObjectName(QStringLiteral("horizontalSlider"));
@@ -201,7 +204,7 @@ public:
         menuBar->addAction(menuFile->menuAction());
         menuBar->addAction(menuEdit->menuAction());
         menuBar->addAction(menuAbout->menuAction());
-        menuFile->addAction(actionOpen_File);
+        menuFile->addAction(actionOpen_2);
         menuFile->addAction(actionOpen_Directory);
         menuFile->addAction(menuRecent->menuAction());
         menuRecent->addAction(actionNothing_To_Show_Here);
@@ -218,7 +221,7 @@ public:
 
         retranslateUi(MainWindow);
 
-        tabWidget->setCurrentIndex(0);
+        tabWidget->setCurrentIndex(1);
         pushButton->setDefault(false);
 
 
@@ -228,9 +231,7 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QApplication::translate("MainWindow", "Musix Player", nullptr));
-        actionAbout->setText(QApplication::translate("MainWindow", "About", nullptr));
         actionAbout_Musix_Player->setText(QApplication::translate("MainWindow", "About Musix Player", nullptr));
-        actionOpen_File->setText(QApplication::translate("MainWindow", "Open File ", nullptr));
         actionOpen_Directory->setText(QApplication::translate("MainWindow", "Open Directory", nullptr));
         actionNothing_To_Show_Here->setText(QApplication::translate("MainWindow", "Nothing To Show Here", nullptr));
         actionOpen->setText(QApplication::translate("MainWindow", "Open", nullptr));
@@ -244,6 +245,10 @@ public:
         actionRedo_Action->setText(QApplication::translate("MainWindow", "Redo 'Action'", nullptr));
         actionAppearance->setText(QApplication::translate("MainWindow", "Appearance", nullptr));
         actionAudio_Settings->setText(QApplication::translate("MainWindow", "Audio Settings", nullptr));
+        actionOpen_2->setText(QApplication::translate("MainWindow", "Open", nullptr));
+#ifndef QT_NO_TOOLTIP
+        actionOpen_2->setToolTip(QApplication::translate("MainWindow", "Open...", nullptr));
+#endif // QT_NO_TOOLTIP
         tabWidget->setTabText(tabWidget->indexOf(tab_3), QApplication::translate("MainWindow", "Library", nullptr));
         tabWidget->setTabToolTip(tabWidget->indexOf(tab_3), QApplication::translate("MainWindow", "Music Library", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(tab_4), QApplication::translate("MainWindow", "Recently Played....", nullptr));

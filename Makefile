@@ -528,6 +528,7 @@ compiler_rcc_clean:
 qrc_resources.cpp: resources.qrc \
 		/usr/bin/rcc \
 		white-rewind-16.png \
+		icon.jpg \
 		white-play-16.png \
 		Open_file_document_paper_folder.png \
 		white-fast-forward-16.png
